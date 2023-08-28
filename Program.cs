@@ -20,3 +20,28 @@ void PrintArray (string[] array)
 }
 
 PrintArray(arr1);
+
+string[] CreateNewArray(string[] array)
+{
+    for (var i = 0; i < array.Length; i++)
+    {
+        
+        if array(i) <= 3
+        {
+           
+        }
+    }
+    return array;
+}
+
+int SizeArray(string[] array)
+{
+    foreach (string item in array)
+    {
+        if (item.Length <= 3)
+        {
+            count ++;
+        }
+    }
+    return count;
+}
