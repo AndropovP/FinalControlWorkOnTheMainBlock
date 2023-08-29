@@ -11,31 +11,31 @@ string[] arr1 = new string [4] {"Hello", "2", "world", ":-)"};
 
 void PrintArray (string[] array)
 {
-    System.Console.Write("[");
     foreach (var item in array)
     {
         System.Console.Write($"“{item}” ");    
     }
-    System.Console.WriteLine("]");
 }
 
-PrintArray(arr1);
 
 string[] CreateNewArray(string[] array)
 {
-    for (var i = 0; i < array.Length; i++)
+    string[] arr2 = new string [SizeArray(arr1)];
+    int j = 0;
+    foreach (string item in array)
     {
-        
-        if array(i) <= 3
+        if (item.Length <= 3)
         {
-           
+           arr2[j] = item;
+           j++;
         }
     }
-    return array;
+    return arr2;
 }
 
 int SizeArray(string[] array)
 {
+    int count = 0;
     foreach (string item in array)
     {
         if (item.Length <= 3)
@@ -45,3 +45,6 @@ int SizeArray(string[] array)
     }
     return count;
 }
+
+PrintArray(arr1);
+PrintArray(CreateNewArray(arr1));
