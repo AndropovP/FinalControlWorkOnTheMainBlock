@@ -8,17 +8,20 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 string[] arr1 = new string [4] {"Hello", "2", "world", ":-)"};
+// string[] arr1 = new string [4] {"1234", "1567", "-2", "computer science"};
+// string[] arr1 = new string [3] {"Russia", "Denmark", "Kazan"};
 
-void PrintArray (string[] array)
+void PrintArray (string[] array)        //Функция печати массива
 {
     foreach (var item in array)
     {
         System.Console.Write($"“{item}” ");    
     }
+    if (array.Length == 0) System.Console.WriteLine("“ ”");
+    System.Console.WriteLine();
 }
 
-
-string[] CreateNewArray(string[] array)
+string[] CreateNewArray(string[] array)     //Функция создания нового массива
 {
     string[] arr2 = new string [SizeArray(arr1)];
     int j = 0;
@@ -33,18 +36,15 @@ string[] CreateNewArray(string[] array)
     return arr2;
 }
 
-int SizeArray(string[] array)
+int SizeArray(string[] array)                   //Функция определения длинны нового массива
 {
     int count = 0;
     foreach (string item in array)
     {
-        if (item.Length <= 3)
-        {
-            count ++;
-        }
+        if (item.Length <= 3) count ++;
     }
     return count;
 }
 
-PrintArray(arr1);
-PrintArray(CreateNewArray(arr1));
+PrintArray(arr1);                       //Вывод на печать входящего массива
+PrintArray(CreateNewArray(arr1));       //Вывод на печать исходящего массива
